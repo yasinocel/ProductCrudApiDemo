@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -12,6 +12,14 @@
 		<PublishProfile>DefaultContainer</PublishProfile>
 		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="appsettings.docker.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="appsettings.docker.json" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
